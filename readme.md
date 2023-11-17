@@ -14,4 +14,4 @@ import "@ghom/utils"
 
 ## Added methods
 
-- RegExp.matches()
+- `<RegExp>.matches()` - returns an array of matches
