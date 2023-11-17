@@ -1,0 +1,29 @@
+{
+  "name": "@ghom/utils",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/esm/index.js",
+  "types": "dist/typings/index.d.ts",
+  "description": "Javascript utils",
+  "prettier": {
+    "semi": false
+  },
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "scripts": {
+    "format": "prettier --write src tsconfig.*",
+    "build": "rm -fr dist/* && tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json && fixup.sh",
+    "test": "npm run build && node --experimental-vm-modules node_modules/jest/bin/jest.js tests/test.js --detectOpenHandles",
+    "prepublishOnly": "npm run format && npm test"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.6",
+    "@types/node": "^20.8.9",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
+}
