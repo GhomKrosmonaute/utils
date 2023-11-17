@@ -6,7 +6,12 @@
 npm install @ghom/utils
 ```
 
-## List of utils
+## Usage
 
-- regex
-  - matches
+```javascript
+import "@ghom/utils"
+```
+
+## Added methods
+
+- RegExp.matches()
