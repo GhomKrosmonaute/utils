@@ -15,4 +15,6 @@ import "@ghom/utils"
 ## Added methods
 
 - `<RegExp>.matches()` - returns an array of matches
-- `<Array>.filterKeys()` - returns an array of objects with only the specified keys
+- `<Array>.pick()` - returns an array of objects with only the specified keys
+- `<Array>.omit()` - returns an array of objects without the specified keys
+- `<Array>.partition()` - return a tuple of two arrays, filtered by the predicate
