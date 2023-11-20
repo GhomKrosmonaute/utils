@@ -1,5 +1,12 @@
 declare global {
   interface Array<T> {
+    get first(): T | undefined
+    get second(): T | undefined
+    get third(): T | undefined
+    get fourth(): T | undefined
+    get fifth(): T | undefined
+    get last(): T | undefined
+
     /**
      * Returns an array of objects with only the specified keys
      * @param keys
@@ -60,4 +67,37 @@ Array.prototype.partition = function (predicate) {
   return [truthy, falsy]
 }
 
-export {}
+Object.defineProperties(Array.prototype, {
+  first: {
+    get() {
+      return this[0]
+    },
+  },
+  second: {
+    get() {
+      return this[1]
+    },
+  },
+  third: {
+    get() {
+      return this[2]
+    },
+  },
+  fourth: {
+    get() {
+      return this[3]
+    },
+  },
+  fifth: {
+    get() {
+      return this[4]
+    },
+  },
+  last: {
+    get() {
+      return this[this.length - 1]
+    },
+  },
+})
+
+export const array = 0

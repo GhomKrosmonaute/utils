@@ -93,4 +93,4 @@ RegExp.prototype.matches = function (str, matchOnly) {
   return output
 }
 
-export {}
+export const regex = 0
