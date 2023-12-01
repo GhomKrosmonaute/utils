@@ -9,7 +9,7 @@ declare global {
      */
     tupleKeys<T>(object: T): types.UnionToTuple<keyof T>
 
-    fromEntries<const T extends [string | symbol | number, any][]>(
+    fromEntries<T extends [string | symbol | number, any][]>(
       entries: T,
     ): {
       [K in T[number][0]]: Extract<T[number], [K, any]>[1]
